@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+
+
+
+/*#region   Navbar*/
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    align-items: center;                /*     Vertical align the elements     */
+}
+
+nav ul li{
+    padding: 0 /*Up and Down*/    12px;
+}
+
+/*  This is the style for the text written after the logo image of the brand and is acting as a part of the logo*/
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+/*#endregion*/
+
+
+/*#region   For Middle Part*/
+.container{
+    min-height: 62vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    width: 70%;
+    border-radius: 12px;
+    margin: 23px auto;
+    padding: 34px;
+    background: url('bg.jpg');
+    background-size: cover;
+    
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 5px;
+    border-radius: 34px;
+}
+
+.timeStamp{
+    margin: 0 23px;
+}
+
+.timeStamp i{
+    cursor: pointer;
+
+}
+
+.songItemContainer{
+    margin-top: 37px;
+}
+
+
+
+
+/*#endregion*/
+
+
+/* #region      Bottom Bar*/
+.bottom{
+    position: sticky;
+    height: 90px;
+    background-color: black;
+    color: white;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons{
+    margin-top: 11px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+}
+
+.songInfo img{
+
+    /*
+    This is a transition that will allow the gif to be displayed by changing the opacity to 1 once the user press the play button and again turns the opacity to 0 when presses the pause button
+    */
+    font-family: 'Varela Round', sans-serif;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    margin: 0 7px;
+}
+
+/* #endregion */
+
+
+
+
+@media screen and (max-width:930px){
+    .container{
+        background: black;
+    }
+
+    .songList{
+        justify-content: center;
+        width: 100%;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .icons i{
+        font-size: 19px;
+    }
+
+    .icons {
+        margin-top: 36px;
+    }
+
+    .songInfo{
+        left: auto;
+    }
+
+    
+}
+
+@media screen and (max-width:769px){
+    .container{
+        min-height: 74vh;
+    }
+}
+
+
+@media screen and (max-width:644px){
+    .songName{
+        width: 50%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+}
+
+
+@media screen and (max-width:490px){
+    .timeStamp{
+        display: flex;
+        justify-content: center;
+    }
+
+    .songName{
+        margin: 12px;
+    }
+
+    .songName{
+        font-size: 10px;
+    }
+
+    .container{
+        min-height: 70vh;
+    }
+}
